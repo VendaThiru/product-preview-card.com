@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;600;700&display=swap');
+:root{   
+--Dark--cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+--Very--dark--blue: hsl(212, 21%, 14%);
+--Dark--grayish--blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--Cream);
+}
+.image-hero{
+    width: 60%;
+    background-size: cover;
+    background-position: 100%;
+    border-radius: 15px 0 0 15px;
+    box-sizing:content-box;
+}
+.image-hero2{
+    display: none;
+}
+#card{
+    display: flex;
+    justify-content: space-between;
+    width: 575px;
+    padding: 25px;
+    margin: 25px auto;
+}
+.sub-card{
+    background-color: var(--White);
+    padding-left: 50px;
+    padding: 25px ;
+    border-radius: 0 15px 15px 0;
+}
+.sub-card .perfume{
+    padding-top: 5px;
+    color: var(--Dark--grayish--blue);
+    letter-spacing: 15px;
+}
+.sub-card .title{
+    width: 20vw;
+    padding-top: 10px;
+    color: var(--Very--dark--blue);
+    font-weight: 700;
+    font-family: sans-serif;
+}
+.sub-card .para{
+    padding: 20px 0 20px 0;
+
+    color: var(--Dark--grayish--blue);    
+    font-size: 20px;
+}
+#pricess{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.price{
+    color: var(--Dark--cyan);
+    font-size: 2em;
+    font-weight: 700;
+}
+.old-price{
+    color: var(--Dark--grayish--blue);  
+    font-size: 1em;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+button{
+    height: 4vh;
+    width: 10vw;
+    border-radius: 15px;
+    background-color: var(--Dark--cyan); 
+    color: var(--White);
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    margin-top: 25px;
+}
+button:hover{
+    background-color: var(--Very--dark--blue);
+    font-weight: 900;
+}
+
+/* Media Query */
+@media (max-width:768px) {
+    #card{
+        display: flex;
+        flex-direction: column;
+    }
+    .image-hero {
+        display: none;
+        width: 100%;
+        /* height: 10vh; */
+    }
+    .image-hero2{
+        display: flex;
+    }
+    .sub-card {
+        background-color: var(--White);
+    }
+    .sub-card .perfume {
+        padding-top: 20px;
+    }
+    .sub-card .title {
+        padding-top: 25px;
+        font-size: 3em;
+
+        font-weight: 800;
+    }
+    .sub-card .para {
+        padding: 40px 0 25px 0;
+        color: var(--Dark--grayish--blue);
+        font-size: 1.8em;
+    }
+    .price {
+        font-size: 2.5em;
+    }
+    .old-price {
+        font-size: 1.5em;
+        padding: 15px 15px 15px 0;
+    }
+    button {
+        height: 6vh;
+        width: 100%;
+    }
+}
